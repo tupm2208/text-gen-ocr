@@ -9,5 +9,5 @@ python ./run.py -l pass \
                 -f 50 \
                 -c 60 \
                 -al 0 \
-                -t 3
+                -t 10
 rm out/labels.txt
