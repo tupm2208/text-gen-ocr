@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+OUTPUT_DIR=/media/trongpq/HDD/out
+INPUT_FILE=
+python ./run.py --output_dir=${OUTPUT_DIR} \
+                --input_file=${INPUT_FILE} \
+                --language=jp \
+                --thread_count=2 \
+                --extension='png' \
+                --background=1 \
+                --name_format=2 \
+                --format=100

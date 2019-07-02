@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+python ./run.py -l jp \
+                -e png \
+                -b 1 \
+                -na 2 \
+                -f 50 \
+                -c 10 \
+                -al 0 \
+                -t 3

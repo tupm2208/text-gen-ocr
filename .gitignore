@@ -1,0 +1,10 @@
+/handwritten_model
+/pictures
+/texts
+.idea/
+*.sh
+__pycache__/
+/out
+venv/
+*.pyc
+.vscode/
