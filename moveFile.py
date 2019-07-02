@@ -3,8 +3,7 @@ import random
 
 folders = [os.path.join('out', folder) for folder in os.listdir('out')]
 os.makedirs('test', exist_ok=True)
-f1 = open(os.path.join('out', 'labels.txt'), 'w+')
-f2 = open(os.path.join('test', 'labels.txt'), 'w+')
+
 for e in folders:
     if e == 'out/labels.txt':
         continue
@@ -14,13 +13,6 @@ for e in folders:
     for i in range(0, int(len(images)/5)):
         os.rename(images[i], images[i].replace('out', 'test'))
 
-        texts = images[i].split('/')
-        f2.write("%s %s\n" % (texts[2], texts[1]))
-
-    for i in range(int(len(images)/5), len(images)):
-
-        texts = images[i].split('/')
-        f1.write("%s %s\n" % (texts[2], texts[1]))
-
-f1.close()
-f2.close()
+    os.makedirs(e.replace('out', 'val'), exist_ok=True)
+    for i in range(int(len(images)/5), int(len(images)/5) + int(len(images)/25)):
+        os.rename(images[i], images[i].replace('out', 'val'))
