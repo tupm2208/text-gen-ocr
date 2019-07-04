@@ -315,7 +315,7 @@ def main():
     list_dilate = [0]
     list_erode = [0]
     list_scale = [0]
-    list_size = range(80, 120, 10)
+    list_size = range(80, 120, 1)
     arr_font = []
     arr_blur = []
     arr_bg = []
