@@ -9,5 +9,4 @@ python ./run.py -l pass \
                 -f 50 \
                 -c 1 \
                 -al 0 \
-                -t 10 \
-                -d 3
+                -t 10 

@@ -80,7 +80,7 @@ class FakeTextDataGenerator(object):
         else:
             image = ComputerTextGenerator.generate(text, font, text_color, size, orientation, space_width)
 
-        random_angle = random.randint(0 - skewing_angle, skewing_angle)
+        random_angle = random_skew
 
         rotated_img = image.rotate(skewing_angle if not random_skew else random_angle, expand=1)
 
