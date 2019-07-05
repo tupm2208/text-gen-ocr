@@ -312,10 +312,11 @@ def main():
     list_font = fonts
     list_blurs = [0]
     list_bg = [0, 1]
-    list_dilate = [0]
+    list_dilate = [2,3]
     list_erode = [0]
-    list_scale = [0]
-    list_size = range(80, 120, 1)
+    list_scale = [0.9, 0, 1.1]
+    list_size = range(50, 70, 4)
+    list_skew_angle = [10,8,5, 0]
     arr_font = []
     arr_blur = []
     arr_bg = []
@@ -323,6 +324,7 @@ def main():
     arr_size = []
     arr_dilate = []
     arr_erode = []
+    arr_skew_angle = []
 
     for char in strings:
         for font in list_font:
@@ -332,14 +334,16 @@ def main():
                         for size in list_size:
                             for erode in list_erode:
                                 for dilate in list_dilate:
-                                    arr_dilate.append(dilate)
-                                    arr_erode.append(erode)
-                                    arr_size.append(size)
-                                    arr_scale.append(scale)
-                                    list_words.append(char)
-                                    arr_font.append(font)
-                                    arr_blur.append(blur)
-                                    arr_bg.append(back)
+                                    for screw in list_skew_angle:
+                                        arr_skew_angle.append(screw)
+                                        arr_dilate.append(dilate)
+                                        arr_erode.append(erode)
+                                        arr_size.append(size)
+                                        arr_scale.append(scale)
+                                        list_words.append(char)
+                                        arr_font.append(font)
+                                        arr_blur.append(blur)
+                                        arr_bg.append(back)
 
     string_count = len(list_words)
 
@@ -353,7 +357,7 @@ def main():
                 [args.output_dir] * string_count,
                 arr_size,
                 [args.extension] * string_count,
-                [args.skew_angle] * string_count,
+                arr_skew_angle,
                 [args.random_skew] * string_count,
                 arr_blur,
                 [args.random_blur] * string_count,
@@ -375,12 +379,12 @@ def main():
         pass
     p.terminate()
 
-    if args.name_format == 2:
-        # Create file with filename-to-label connections
-        with open(os.path.join(args.output_dir, "labels.txt"), 'w', encoding="utf8") as f:
-            for i in range(string_count):
-                file_name = str(i) + "." + args.extension
-                f.write("{} {}\n".format(file_name, list_words[i]))
+    # if args.name_format == 2:
+    #     # Create file with filename-to-label connections
+    #     with open(os.path.join(args.output_dir, "labels.txt"), 'w', encoding="utf8") as f:
+    #         for i in range(string_count):
+    #             file_name = str(i) + "." + args.extension
+    #             f.write("{} {}\n".format(file_name, list_words[i]))
 
 
 if __name__ == '__main__':

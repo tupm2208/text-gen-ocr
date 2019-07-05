@@ -49,11 +49,15 @@ class FakeTextDataGenerator(object):
             left = right = delta // 2
         elif new_width > new_height:
             bottom = top = delta // 2
-        border_image = cv2.copyMakeBorder(border_image, top, bottom, left, right, cv2.BORDER_CONSTANT, (0, 0, 0))
-        top = 10
-        bottom = 10
-        left = 10
-        right = 10
+        # border_image = cv2.copyMakeBorder(border_image, top, bottom, left, right, cv2.BORDER_CONSTANT, (0, 0, 0))
+        # print("size: ", np.max(new_height, new_width))
+        add = np.max([new_height, new_width])//8
+        index_top = random.choice([-1, 0, 1])
+        index_left = random.choice([-1, 0, 1])
+        top += add + index_top
+        bottom += add - index_top
+        left += add + index_left
+        right += add - index_left
         border_image = cv2.copyMakeBorder(border_image, top, bottom, left, right, cv2.BORDER_CONSTANT,
                                           (0, 0, 0))
 

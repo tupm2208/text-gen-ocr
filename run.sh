@@ -7,7 +7,7 @@ python ./run.py -l pass \
                 -b 1 \
                 -na 2 \
                 -f 50 \
-                -c 50 \
+                -c 1 \
                 -al 0 \
-                -t 10
-rm out/labels.txt
+                -t 10 \
+                -d 3
