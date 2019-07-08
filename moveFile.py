@@ -10,5 +10,5 @@ for e in folders:
     os.makedirs(e.replace('out', 'val'), exist_ok=True)
     images = [os.path.join(e, image) for image in os.listdir(e)]
     random.shuffle(images)
-    for i in range(0, int(len(images)/10)):
+    for i in range(0, int(len(images)/5)):
         os.rename(images[i], images[i].replace('out', 'val'))
