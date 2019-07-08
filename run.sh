@@ -7,7 +7,7 @@ python ./run.py -l pass \
                 -b 1 \
                 -na 2 \
                 -f 50 \
-                -c 2 \
+                -c 4 \
                 -al 0 \
                 -t 10 \
                 -d 3
