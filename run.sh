@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-rm -rf out/*
-rm -rf val/*
-rm -rf test/*
+# rm -rf out/*
+# rm -rf val/*
+# rm -rf test/*
 python ./run.py -l pass \
                 -e png \
                 -b 1 \
