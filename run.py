@@ -317,7 +317,7 @@ def main():
     list_dilate = [2,3]
     list_erode = [0]
     list_scale = [0.9, 0, 1.1]
-    list_size = range(15, 90, 3)
+    list_size = range(25, 90, 3)
     list_skew_angle = [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
     arr_font = []
     arr_blur = []
