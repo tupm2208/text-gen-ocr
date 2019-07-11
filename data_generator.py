@@ -58,8 +58,7 @@ class FakeTextDataGenerator(object):
         bottom += add - index_top
         left += add + index_left
         right += add - index_left
-        border_image = cv2.copyMakeBorder(border_image, top, bottom, left, right, cv2.BORDER_CONSTANT,
-                                          (0, 0, 0))
+        border_image = cv2.copyMakeBorder(border_image, top, bottom, left, right, cv2.BORDER_CONSTANT, (0, 0, 0))
 
         resized_border_image = cv2.resize(border_image, (50, 50))
         resized_border_image = cv2.cvtColor(resized_border_image, cv2.COLOR_BGR2GRAY)
