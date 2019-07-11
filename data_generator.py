@@ -55,17 +55,7 @@ class FakeTextDataGenerator(object):
         index_top = random.choice([-1, 0, 1])
         index_left = random.choice([-1, 0, 1])
         
-        if bottom + add -index_top > 0:
-            top += add + index_top
-            bottom += add - index_top
-        else:
-            top = bottom = add
-        
-        if right + add - index_left > 0:
-            left += add + index_left
-            right += add - index_left
-        else:
-            left = right = add
+        top = bottom = left = right = add
         border_image = cv2.copyMakeBorder(border_image, top, bottom, left, right, cv2.BORDER_CONSTANT, (0, 0, 0))
 
         resized_border_image = cv2.resize(border_image, (50, 50))
