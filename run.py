@@ -316,7 +316,7 @@ def main():
     list_erode = [0]
     list_scale = [0.9, 0, 1.1]
     list_size = range(30, 70, 3)
-    list_skew_angle = [-4, -3, -2, -1, 0, 1, 2, 3, 4]
+    list_skew_angle = [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
     arr_font = []
     arr_blur = []
     arr_bg = []
