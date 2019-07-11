@@ -59,7 +59,7 @@ class FakeTextDataGenerator(object):
             top += add + index_top
             bottom += add - index_top
         
-        if right + add - index_left > 0
+        if right + add - index_left > 0:
             left += add + index_left
             right += add - index_left
         border_image = cv2.copyMakeBorder(border_image, top, bottom, left, right, cv2.BORDER_CONSTANT, (0, 0, 0))
