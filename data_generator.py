@@ -54,10 +54,14 @@ class FakeTextDataGenerator(object):
         add = np.max([new_height, new_width])//8
         index_top = random.choice([-1, 0, 1])
         index_left = random.choice([-1, 0, 1])
-        top += add + index_top
-        bottom += add - index_top
-        left += add + index_left
-        right += add - index_left
+        
+        if bottom + add -index_top > 0:
+            top += add + index_top
+            bottom += add - index_top
+        
+        if right + add - index_left > 0
+            left += add + index_left
+            right += add - index_left
         border_image = cv2.copyMakeBorder(border_image, top, bottom, left, right, cv2.BORDER_CONSTANT, (0, 0, 0))
 
         resized_border_image = cv2.resize(border_image, (50, 50))
