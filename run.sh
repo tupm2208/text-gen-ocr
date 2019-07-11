@@ -2,7 +2,7 @@
 rm -rf out/*
 rm -rf val/*
 rm -rf test/*
-python ./run.py -l pass2 \
+python ./run.py -l pass \
                 -e png \
                 -b 1 \
                 -na 2 \
