@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-rm -rf out/*
-rm -rf val/*
+rm -rf /home/ai-team/projects/tupm/character/out/*
+rm -rf /home/ai-team/projects/tupm/character/val/*
 rm -rf test/*
 
 python ./run.py -l pass \
@@ -8,7 +8,8 @@ python ./run.py -l pass \
                 -b 1 \
                 -na 2 \
                 -f 50 \
-                -c 2 \
+                -c 1 \
                 -al 0 \
                 -t 4 \
-                -d 3
+                -d 2 \
+                --output_dir /home/ai-team/projects/tupm/character/out
